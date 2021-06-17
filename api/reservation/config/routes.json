@@ -39,6 +39,14 @@
       "config": {
         "policies": []
       }
+    },     
+    {
+     "method": "PUT",
+      "path": "/reservation/stage/:id/:stage",
+      "handler": "reservation.updateStage",
+      "config": {
+        "policies": []
+      }
     },
     {
       "method": "DELETE",

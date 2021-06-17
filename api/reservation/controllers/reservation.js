@@ -1,8 +1,13 @@
-'use strict';
 
-/**
- * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
- * to customize this controller
- */
-
-module.exports = {};
+module.exports = {
+//   async create(ctx) {
+//     return await strapi.services.reservation.create({
+//       ...ctx.request.body,
+//       payUntil: new Date(),
+//     });
+//   },
+  async updateStage(ctx) {
+    const { id, stage } = ctx.params;
+    return await strapi.services.reservation.update({ id }, { stage });
+  },
+};
